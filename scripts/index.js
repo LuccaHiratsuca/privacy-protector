@@ -1,5 +1,3 @@
-// script.js
-
 class PrivacyProtectorScanner {
   constructor() {
     this.score = 100;

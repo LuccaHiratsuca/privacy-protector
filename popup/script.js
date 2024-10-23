@@ -1,5 +1,3 @@
-// script.js
-
 class PrivacyProtectorPopup {
   constructor() {
     // Elementos do DOM
@@ -65,7 +63,7 @@ class PrivacyProtectorPopup {
     });
   }
 
-  handleScanResult(message, sender, sendResponse) {
+  handleScanResult(message) {
     if (message.type === 'scanResult') {
       // Atualizar os status
       document.getElementById('thirdPartyStatus').textContent = message.thirdPartyDomains !== 'Nenhum domínio de terceiros detectado' ? 'Detectado' : 'Nenhum domínio de terceiros detectado';
