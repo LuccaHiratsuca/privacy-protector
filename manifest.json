@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Privacy Protector Monitor",
+  "version": "1.0",
+  
+  "applications": {
+    "gecko": {
+      "id": "privacy-protector@mozilla.org"
+    }
+  },
+  
+  "permissions": ["http://*/*", "https://*/*", "tabs"],
+
+  "browser_action": {
+    "default_icon": "logo/icon.png",
+    "default_title": "Privacy Protector Monitor",
+    "default_popup": "popup/index.html"
+  },
+
+  "web_accessible_resources": [
+    "assets/loading.gif"
+  ]
+}

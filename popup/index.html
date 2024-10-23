@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Protector</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>Relatório de Privacidade</h1>
+  
+  <button id="runScan">Executar Verificação</button>
+  <button id="about">Pontuação</button>
+
+  <div id="loading" style="display:none;">
+    <p id="scanningText">Verificando...</p> 
+    <img src="../assets/loading.gif" alt="Carregando" />
+  </div>  
+
+  <div id="result" style="display:none;">
+    <button id="scoreInfo" class="score-info-btn">Pontuação</button>
+    
+    <div class="status">
+      <div class="status-item">
+        <p><strong>Domínios de Terceiros:</strong> <span id="thirdPartyStatus">Carregando...</span></p>
+        <p class="deduction" id="thirdPartyDeduction">Dedução: 0 pontos</p>
+        <button class="details-btn" data-type="thirdParty">Ver Detalhes</button>
+        <div class="details" id="thirdPartyDetails" style="display:none;"></div>
+      </div>
+      <div class="status-item">
+        <p><strong>Ameaças de Sequestro/Hooking:</strong> <span id="hijackingStatus">Carregando...</span></p>
+        <p class="deduction" id="hijackingDeduction">Dedução: 0 pontos</p>
+        <button class="details-btn" data-type="hijacking">Ver Detalhes</button>
+        <div class="details" id="hijackingDetails" style="display:none;"></div>
+      </div>
+      <div class="status-item">
+        <p><strong>Armazenamento Local Detectado:</strong> <span id="storageStatus">Carregando...</span></p>
+        <p class="deduction" id="storageDeduction">Dedução: 0 pontos</p>
+        <button class="details-btn" data-type="storage">Ver Detalhes</button>
+        <div class="details" id="storageDetails" style="display:none;"></div>
+      </div>
+      <div class="status-item">
+        <p><strong>Canvas Fingerprinting:</strong> <span id="fingerprintStatus">Carregando...</span></p>
+        <p class="deduction" id="fingerprintDeduction">Dedução: 0 pontos</p>
+        <button class="details-btn" data-type="fingerprint">Ver Detalhes</button>
+        <div class="details" id="fingerprintDetails" style="display:none;"></div>
+      </div>
+      <div class="status-item">
+        <p><strong>Cookies:</strong> <span id="cookieStatus">Carregando...</span></p>
+        <p class="deduction" id="cookieDeduction">Dedução: 0 pontos</p>
+        <button class="details-btn" data-type="cookies">Ver Detalhes</button>
+        <div class="details" id="cookiesDetails" style="display:none;"></div>
+      </div>
+      <div class="status-item">
+        <p><strong>Quantidade de Cookies:</strong> <span id="cookieAmount">Carregando...</span></p>
+        <p class="deduction" id="cookieAmountDeduction">Dedução: 0 pontos</p>
+        <button class="details-btn" data-type="cookieAmount">Ver Detalhes</button>
+        <div class="details" id="cookieAmountDetails" style="display:none;"></div>
+      </div>
+    </div>
+
+    <p class="score">Pontuação de Privacidade: <span id="privacyScore">Calculando...</span></p>
+  </div>
+
+  <div id="aboutSection" style="display:none; margin-top: 20px;">
+    <h2>Sobre a Pontuação de Privacidade</h2>
+    
+    <table class="deduction-table">
+      <thead>
+        <tr>
+          <th>Risco</th>
+          <th>Dedução de Pontos</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Domínios de Terceiros</td>
+          <td>15 pontos</td>
+          <td>Dedução se o site usar domínios de terceiros para anúncios ou rastreamento, permitindo coleta de informações do usuário.</td>
+        </tr>
+        <tr>
+          <td>Ameaças de Sequestro/Hooking</td>
+          <td>20 pontos</td>
+          <td>Dedução se o site estiver embutido em um iframe, indicando possíveis riscos de sequestro de navegador ou injeção de scripts maliciosos.</td>
+        </tr>
+        <tr>
+          <td>Uso de Armazenamento Local</td>
+          <td>15 pontos</td>
+          <td>Dedução se o site armazenar dados no localStorage, que podem conter informações sensíveis e serem usados para rastreamento.</td>
+        </tr>
+        <tr>
+          <td>Canvas Fingerprinting</td>
+          <td>10 pontos</td>
+          <td>Dedução se o site utilizar canvas fingerprinting, técnica que cria um identificador único com base na renderização gráfica do navegador.</td>
+        </tr>
+        <tr>
+          <td>Cookies de Terceiros</td>
+          <td>15 pontos</td>
+          <td>Dedução se o site configurar cookies de terceiros, frequentemente usados para rastreamento entre diferentes sites.</td>
+        </tr>
+        <tr>
+          <td>Quantidade de Cookies</td>
+          <td>10 pontos</td>
+          <td>Dedução se o total de cookies (primeira e terceira parte) exceder 10, indicando práticas intensivas de rastreamento.</td>
+        </tr>
+        <tr>
+          <td>Excesso de Cookies de Terceiros</td>
+          <td>2 pontos por cookie acima de 5</td>
+          <td>Dedução adicional de pontos por cada cookie de terceiros acima de 5, aumentando com a quantidade excessiva.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Por que nem tudo deduz pontos:</strong> Alguns riscos de privacidade são mais graves do que outros. As quantidades de dedução são determinadas pelo quão invasivo ou arriscado é cada comportamento. Riscos mais invasivos (como domínios de terceiros e sequestro) deduzem mais pontos, enquanto riscos mais sutis (como canvas fingerprinting) deduzem menos pontos.</p>
+
+    <button id="closeAbout">Fechar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

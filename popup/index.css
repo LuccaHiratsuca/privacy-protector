@@ -1,0 +1,177 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #FFFFFF;
+}
+
+h1 {
+  font-size: 24px;
+  color: #C5242D;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #C5242D;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px auto;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #a31e23;
+}
+
+#loading {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#loading img {
+  width: 50px;
+  height: 50px;
+}
+
+.status {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.status-item {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.status-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.deduction {
+  margin: 5px 0 10px 0;
+  font-size: 14px;
+  color: #D9534F;
+}
+
+.details-btn {
+  background-color: transparent;
+  color: #C5242D;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+  margin-top: 5px;
+}
+
+.details-btn:hover {
+  color: #ffffff;
+  background-color: #C5242D;
+  
+}
+
+.details {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.score {
+  font-size: 18px;
+  color: #C5242D;
+  font-weight: bold;
+  text-align: center;
+}
+
+.score-info-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #C5242D;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.score-info-btn:hover {
+  background-color: #C5242D;
+  color: white;
+}
+
+#aboutSection {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+#aboutSection h2 {
+  font-size: 20px;
+  color: #C5242D;
+  margin-bottom: 15px;
+}
+
+#aboutSection p, 
+#aboutSection li {
+  font-size: 16px;
+  color: #333;
+}
+
+#aboutSection ul {
+  padding-left: 20px;
+}
+
+.deduction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.deduction-table th, .deduction-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.deduction-table th {
+  background-color: #C5242D;
+  color: white;
+}
+
+.deduction-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.deduction-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+#closeAbout {
+  margin-top: 20px;
+}
+
